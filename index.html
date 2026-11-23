@@ -1,215 +1,1230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anubhav Weds Manisha | 09.12.2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background: linear-gradient(135deg, #2c0703 0%, #5c1409 50%, #2c0703 100%);
-            color: #f8e5c2;
-            font-family: 'Cormorant Garamond', serif;
-            min-height: 100vh;
-            overflow-x: hidden;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anubhav weds Manisha 09.12.2026 | #AnubhavWedsManisha</title>
+
+  <!-- Google Fonts: Cinzel Decorative, Cormorant Garamond, Plus Jakarta Sans & Noto Serif Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FFFDF8',
+            cream: '#FAF2E4',
+            sand: '#EBD9B9',
+            maroon: '#630D16',
+            crimson: '#8C1422',
+            royalDark: '#3B060C',
+            gold: '#C69725',
+            goldLight: '#F3D479',
+            goldSoft: '#F6E7C1',
+            textPrimary: '#2E090D',
+            textMuted: '#63373B',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Noto Serif Devanagari"', 'serif'],
+            display: ['"Cinzel Decorative"', '"Cormorant Garamond"', 'serif'],
+            hindi: ['"Noto Serif Devanagari"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            luxury: '0 24px 60px -15px rgba(59, 6, 12, 0.25)',
+            goldGlow: '0 10px 30px -5px rgba(243, 212, 121, 0.45)',
+          }
         }
-        #cover {
-            position: fixed;
-            inset: 0;
-            background: radial-gradient(circle at center, #7a1c0c 0%, #2b0602 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 25px;
-            z-index: 100;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-            border: 8px double #d4af37;
-        }
-        #cover.hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-        .ganesh {
-            font-family: 'Cinzel', serif;
-            color: #f3c65f;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-        .hashtag {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            color: #e5c17b;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .couple-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.3rem;
-            color: #ffd778;
-            line-height: 1.25;
-            margin: 10px 0;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-        }
-        .weds-text {
-            font-style: italic;
-            font-size: 1.4rem;
-            color: #f8e5c2;
-            display: block;
-            margin: 5px 0;
-        }
-        .date-badge {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            border-top: 1px solid #d4af37;
-            border-bottom: 1px solid #d4af37;
-            padding: 8px 20px;
-            margin: 18px 0;
-            color: #ffd778;
-        }
-        .open-btn {
-            margin-top: 20px;
-            background: linear-gradient(45deg, #d4af37, #f7df8b, #d4af37);
-            color: #3a0903;
-            border: none;
-            padding: 15px 34px;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
-        }
-        #main-card {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 35px 22px;
-            background: rgba(43, 6, 2, 0.88);
-            border: 2px solid #d4af37;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
-        }
-        .section-box {
-            margin: 28px 0;
-            padding: 22px 15px;
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            border-radius: 12px;
-            background: rgba(255, 215, 120, 0.04);
-        }
-        h2 {
-            font-family: 'Cinzel', serif;
-            color: #ffd778;
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            letter-spacing: 1.5px;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #f8e5c2;
-        }
-        .highlight {
-            color: #ffd778;
-            font-weight: 600;
-            font-size: 1.3rem;
-        }
-        #music-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #d4af37;
-            color: #2c0703;
-            border: none;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            font-size: 1.3rem;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            z-index: 90;
-            display: none;
-        }
-    </style>
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #4A0810;
+      color: #2E090D;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Rich Royal Crimson & Gold Mandala Ambient Backdrop */
+    .bg-royal-pattern {
+      background-color: #4A0810;
+      background-image:
+        radial-gradient(circle at 20% 15%, rgba(243, 212, 121, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 80% 35%, rgba(140, 20, 34, 0.45) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(198, 151, 37, 0.14) 0%, transparent 55%),
+        linear-gradient(180deg, #570A13 0%, #3A050B 50%, #520912 100%);
+    }
+
+    /* Double-Line Royal Gold Foil Ornamental Border */
+    .royal-frame {
+      border: 2px solid rgba(212, 175, 55, 0.75);
+      box-shadow:
+        inset 0 0 0 4px #FAF2E4,
+        inset 0 0 0 6px rgba(198, 151, 37, 0.45),
+        0 24px 60px -15px rgba(25, 2, 5, 0.55);
+    }
+
+    /* Royal Cover Crimson Frame */
+    .royal-cover-frame {
+      background: radial-gradient(circle at top, #7A101C 0%, #4E0710 60%, #2E0308 100%);
+      border: 2.5px solid #DFBE5B;
+      box-shadow:
+        inset 0 0 0 5px #3D050B,
+        inset 0 0 0 7px rgba(243, 212, 121, 0.55),
+        0 30px 70px rgba(0, 0, 0, 0.75);
+    }
+
+    /* Shimmering Gold Display Text */
+    .gold-shimmer {
+      background: linear-gradient(120deg, #8F6508 0%, #DFBE5B 35%, #630D16 65%, #C69725 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+
+    .gold-shimmer-light {
+      background: linear-gradient(120deg, #E5C158 0%, #FFF1B8 40%, #D4AF37 70%, #FFF1B8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 5s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* Envelope / Cover Screen Transition */
+    #invitation-cover {
+      transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.85s ease;
+    }
+
+    #invitation-cover.opened {
+      transform: translateY(-105%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .animate-float {
+      animation: floatSlow 4.2s ease-in-out infinite;
+    }
+
+    /* Falling Rose & Marigold Petals on Cover Open */
+    @keyframes petalFall {
+      0% { transform: translateY(-10vh) rotate(0deg) translateX(0px); opacity: 0; }
+      15% { opacity: 0.95; }
+      85% { opacity: 0.85; }
+      100% { transform: translateY(108vh) rotate(360deg) translateX(35px); opacity: 0; }
+    }
+
+    .petal-particle {
+      position: fixed;
+      top: -40px;
+      z-index: 60;
+      pointer-events: none;
+      animation: petalFall linear forwards;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #3A050B; }
+    ::-webkit-scrollbar-thumb { background: #C69725; border-radius: 999px; }
+
+    /* Animated Music Equalizer Bars */
+    @keyframes eqBounce {
+      0%, 100% { height: 4px; }
+      50% { height: 14px; }
+    }
+    .eq-bar {
+      width: 2.5px;
+      height: 4px;
+      background-color: currentColor;
+      border-radius: 999px;
+      transition: height 0.2s ease;
+    }
+    .music-playing .eq-bar:nth-child(1) { animation: eqBounce 0.65s ease-in-out infinite; }
+    .music-playing .eq-bar:nth-child(2) { animation: eqBounce 0.5s ease-in-out infinite 0.15s; }
+    .music-playing .eq-bar:nth-child(3) { animation: eqBounce 0.75s ease-in-out infinite 0.3s; }
+  </style>
 </head>
-<body>
+<body class="bg-royal-pattern antialiased selection:bg-gold selection:text-royalDark">
 
-    <audio id="bg-music" loop preload="auto" crossorigin="anonymous">
-        <source src="https://anubhavpal1992-bit.github.io/anu-weds-manisha/song.mp3" type="audio/mpeg">
-    </audio>
+  <!-- Background Wedding Song (Direct Online Link + 1-Minute Lyrics Loop) -->
+  <audio id="weddingAudio" src="https://anubhavpal1992-bit.github.io/anu-weds-manisha/song.mp3" preload="auto" crossorigin="anonymous"></audio>
 
-    <button id="music-control" onclick="toggleMusic()">🔊</button>
+  <!-- ==================== 1. FULL-SCREEN ROYAL CRIMSON & GOLD ENVELOPE COVER ==================== -->
+  <div id="invitation-cover" class="fixed inset-0 z-50 flex items-center justify-center bg-royalDark/95 backdrop-blur-md px-4 py-6 overflow-y-auto">
+    <div class="relative w-full max-w-lg rounded-3xl royal-cover-frame p-6 sm:p-10 text-center overflow-hidden">
+      <!-- Royal Jharokha Arch, Marigold Toran Garlands & Ornate Peacocks (Mor) -->
+      <svg class="w-full h-20 sm:h-24 mx-auto -mt-2 mb-1" viewBox="0 0 440 100" fill="none" role="img" aria-label="Royal Palace Jharokha Arch with Peacocks and Marigold Toran">
+        <!-- Scalloped Gold Arch -->
+        <path d="M12 94 V52 Q38 34 64 46 Q90 22 120 35 Q152 14 188 24 Q220 6 252 24 Q288 14 320 35 Q350 22 376 46 Q402 34 428 52 V94" stroke="#F3D479" stroke-width="2.2" fill="rgba(243, 212, 121, 0.08)"/>
+        <path d="M24 94 V55 Q48 40 72 50 Q96 28 125 40 Q156 20 190 30 Q220 14 250 30 Q284 20 315 40 Q344 28 368 50 Q392 40 416 55 V94" stroke="#DFBE5B" stroke-width="1.1" stroke-dasharray="3 3" opacity="0.75"/>
 
-    <div id="cover">
-        <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
-        <div class="hashtag">ANUBHAV WEDS MANISHA</div>
-        <div class="couple-title">
-            Chiranjeevi Anubhav Pal
-            <span class="weds-text">weds</span>
-            Ayushmati Manisha Singh
+        <!-- Marigold & Mango Leaf Toran -->
+        <path d="M36 48 Q128 82 220 52 Q312 82 404 48" stroke="#F3D479" stroke-width="1.6"/>
+        <circle cx="84" cy="63" r="4.5" fill="#F59E0B"/>
+        <circle cx="128" cy="68" r="5" fill="#F3D479"/>
+        <circle cx="172" cy="63" r="4.5" fill="#F59E0B"/>
+        <circle cx="220" cy="54" r="6" fill="#F3D479" stroke="#630D16" stroke-width="1.5"/>
+        <circle cx="268" cy="63" r="4.5" fill="#F59E0B"/>
+        <circle cx="312" cy="68" r="5" fill="#F3D479"/>
+        <circle cx="356" cy="63" r="4.5" fill="#F59E0B"/>
+
+        <!-- Left Ornate Royal Peacock (Mor) -->
+        <g transform="translate(105, 8) scale(0.95)">
+          <path d="M22 24 C8 22 0 30 -4 40 C6 39 16 35 23 30 C30 25 34 16 32 9 C31 6 26 6 25 11 L23 18 Z" fill="#10B981" fill-opacity="0.35" stroke="#F3D479" stroke-width="1.4"/>
+          <circle cx="6" cy="34" r="2" fill="#F3D479"/>
+          <circle cx="13" cy="31" r="2" fill="#F3D479"/>
+          <circle cx="19" cy="27" r="1.8" fill="#F3D479"/>
+          <circle cx="29" cy="10" r="1.5" fill="#FFFDF8"/>
+          <path d="M32 10 L38 11 L32 13" fill="#F3D479"/>
+          <path d="M28 7 L26 3 M30 7 L31 3" stroke="#F3D479" stroke-width="1.2"/>
+        </g>
+
+        <!-- Right Ornate Royal Peacock (Mor) -->
+        <g transform="translate(335, 8) scale(-0.95, 0.95)">
+          <path d="M22 24 C8 22 0 30 -4 40 C6 39 16 35 23 30 C30 25 34 16 32 9 C31 6 26 6 25 11 L23 18 Z" fill="#10B981" fill-opacity="0.35" stroke="#F3D479" stroke-width="1.4"/>
+          <circle cx="6" cy="34" r="2" fill="#F3D479"/>
+          <circle cx="13" cy="31" r="2" fill="#F3D479"/>
+          <circle cx="19" cy="27" r="1.8" fill="#F3D479"/>
+          <circle cx="29" cy="10" r="1.5" fill="#FFFDF8"/>
+          <path d="M32 10 L38 11 L32 13" fill="#F3D479"/>
+          <path d="M28 7 L26 3 M30 7 L31 3" stroke="#F3D479" stroke-width="1.2"/>
+        </g>
+      </svg>
+
+      <!-- Sacred Invocation -->
+      <p class="font-hindi text-goldLight font-bold text-base sm:text-lg tracking-wide mb-2">
+        ॥ श्री गणेशाय नमः ॥
+      </p>
+
+      <!-- Custom SVG Sacred Lord Ganesha Motif -->
+      <div class="mx-auto my-2 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-full bg-royalDark/80 border-2 border-goldLight/80 shadow-goldGlow animate-float">
+        <svg class="w-14 h-14 sm:w-16 sm:h-16 text-goldLight" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Lord Ganesha Emblem">
+          <path d="M36 24 L50 10 L64 24 Z" fill="#F3D479" fill-opacity="0.3" stroke="#F3D479"/>
+          <path d="M42 24 H58" stroke="#F3D479" stroke-width="2.5"/>
+          <path d="M50 28 V34" stroke="#FFFDF8" stroke-width="2.5"/>
+          <path d="M34 32 C18 30, 14 52, 28 58 C33 60, 36 55, 36 50" stroke="#F3D479"/>
+          <path d="M66 32 C82 30, 86 52, 72 58 C67 60, 64 55, 64 50" stroke="#F3D479"/>
+          <path d="M35 34 C35 24, 65 24, 65 34" stroke="#F3D479"/>
+          <path d="M40 40 Q43 38 46 40" stroke="#FFFDF8"/>
+          <path d="M54 40 Q57 38 60 40" stroke="#FFFDF8"/>
+          <path d="M46 44 C46 56, 45 68, 36 72 C30 74, 27 68, 32 65" stroke="#F3D479" stroke-width="2.6"/>
+          <path d="M54 44 C54 54, 52 62, 47 67" stroke="#F3D479" stroke-width="2.2"/>
+          <path d="M39 52 L35 56" stroke="#FFFDF8" stroke-width="2"/>
+          <path d="M61 52 L64 55" stroke="#FFFDF8" stroke-width="2"/>
+          <path d="M26 82 Q50 74 74 82 Q50 90 26 82 Z" fill="#F3D479" fill-opacity="0.25" stroke="#F3D479"/>
+        </svg>
+      </div>
+
+      <p class="uppercase tracking-[0.25em] text-[11px] sm:text-xs font-semibold text-goldLight/90 mt-2">
+        Anubhav weds Manisha 09.12.2026
+      </p>
+
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold gold-shimmer-light mt-1 leading-tight">
+        Chiranjeevi Anubhav Pal
+        <span class="block font-normal italic text-goldSoft text-xl sm:text-2xl my-0.5">weds</span>
+        Ayushmati Manisha Singh
+      </h1>
+
+      <p class="font-hindi text-base sm:text-lg text-goldSoft mt-2 font-medium">
+        चि. अनुभव पाल <span class="text-goldLight text-sm mx-1">संग</span> आयु. मनीषा सिंह
+      </p>
+
+      <div class="my-4 flex items-center justify-center gap-3">
+        <span class="h-px w-10 bg-goldLight/60"></span>
+        <span class="text-xs font-bold tracking-[0.2em] uppercase text-goldLight">
+          09.12.2026 • Shubh Vivah
+        </span>
+        <span class="h-px w-10 bg-goldLight/60"></span>
+      </div>
+
+      <p class="text-xs sm:text-sm text-goldSoft/85 max-w-sm mx-auto leading-relaxed mb-6">
+        Together with their beloved families, we cordially invite you to grace the auspicious wedding celebrations in Lucknow & Gorakhpur.
+      </p>
+
+      <!-- Prominent Royal Gold "Open Royal Invitation" Button -->
+      <button
+        id="open-invite-btn"
+        type="button"
+        onclick="openInvitation()"
+        class="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-gold via-goldLight to-gold px-8 py-4 text-royalDark font-extrabold tracking-wider text-sm sm:text-base shadow-goldGlow hover:brightness-105 active:scale-95 transition-all duration-300 border-2 border-ivory/70 cursor-pointer"
+      >
+        <span>Open Royal Invitation</span>
+        <svg class="w-4 h-4 text-royalDark group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+
+      <p class="mt-4 text-[11px] tracking-[0.2em] uppercase text-goldLight font-bold">
+        #AnubhavWedsManisha
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== 2. STICKY ROYAL MAROON & GOLD NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-40 bg-royalDark/95 backdrop-blur-md border-b border-gold/45 shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+      <a href="#hero" class="font-serif text-base sm:text-xl font-bold text-goldLight tracking-wide truncate">
+        Anubhav weds Manisha <span class="text-goldSoft text-xs sm:text-sm font-semibold">09.12.2026</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.18em] font-semibold text-goldSoft/85">
+        <a href="#couple" class="hover:text-goldLight transition-colors" data-en="Couple" data-hi="वर-वधू">Couple</a>
+        <a href="#events" class="hover:text-goldLight transition-colors" data-en="Events" data-hi="मांगलिक कार्यक्रम">Events</a>
+        <a href="#baraat" class="hover:text-goldLight transition-colors" data-en="Baraat" data-hi="शाही बारात">Baraat</a>
+        <a href="#venue" class="hover:text-goldLight transition-colors" data-en="Venue" data-hi="प्रीतिभोज स्थल">Venue</a>
+      </nav>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- Royal Music Play / Pause Toggle Button -->
+        <button
+          id="music-toggle"
+          type="button"
+          onclick="toggleWeddingMusic()"
+          class="inline-flex items-center gap-2 rounded-full border border-goldLight/70 bg-maroon px-3 py-1.5 text-xs font-bold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm"
+          title="Play / Pause Wedding Song"
+          aria-label="Play or Pause Wedding Song"
+        >
+          <span class="flex items-end gap-[2px] h-3.5 text-goldLight" aria-hidden="true">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </span>
+          <span id="music-label" data-en="Song" data-hi="संगीत">Song</span>
+        </button>
+
+        <!-- Instant English / हिन्दी Language Toggle -->
+        <button
+          id="lang-toggle"
+          type="button"
+          onclick="toggleLanguage()"
+          class="rounded-full border border-goldLight/60 bg-maroon px-3.5 py-1.5 text-xs font-bold text-goldSoft hover:bg-crimson transition-colors cursor-pointer shadow-sm"
+          title="Switch between English & Hindi"
+        >
+          हिन्दी / EN
+        </button>
+
+        <!-- Quick WhatsApp Share -->
+        <button
+          type="button"
+          onclick="shareOnWhatsApp()"
+          class="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-gold to-goldLight px-3.5 py-1.5 text-xs font-bold text-royalDark hover:brightness-105 transition-colors cursor-pointer shadow-sm"
+        >
+          <svg class="w-3.5 h-3.5 text-royalDark" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+          </svg>
+          <span class="hidden sm:inline" data-en="Share" data-hi="शेयर करें">Share</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 3. HERO, DULHA-DULHAN MANDAP PORTRAIT & LINEAGE ==================== -->
+  <main id="hero" class="max-w-4xl mx-auto px-4 pt-8 pb-20 sm:pt-12">
+
+    <section class="relative rounded-3xl bg-cream p-6 sm:p-12 text-center royal-frame reveal overflow-hidden">
+      <!-- Top Corner Peacocks (Mor) Inside Hero Card -->
+      <div class="flex justify-between items-center mb-2 px-2">
+        <svg class="w-12 h-12 sm:w-14 sm:h-14" viewBox="0 0 64 64" fill="none">
+          <path d="M46 50 C22 50, 10 36, 12 16 C22 23, 30 30, 38 40" fill="#1E6B52" fill-opacity="0.22" stroke="#C69725" stroke-width="2"/>
+          <circle cx="17" cy="21" r="2.5" fill="#630D16"/>
+          <circle cx="24" cy="28" r="2.5" fill="#C69725"/>
+          <circle cx="15" cy="32" r="2.5" fill="#1E6B52"/>
+          <path d="M38 50 C40 36, 46 25, 51 21 C54 19, 57 21, 55 24 C51 28, 48 39, 48 50 Z" fill="#1E6B52" stroke="#C69725" stroke-width="1.4"/>
+          <path d="M51 17 L50 12 M53 17 L55 12" stroke="#630D16" stroke-width="1.5"/>
+        </svg>
+
+        <div class="max-w-xl mx-auto">
+          <p class="font-hindi text-maroon font-bold text-lg sm:text-xl mb-1">
+            ॥ श्री गणेशाय नमः ॥
+          </p>
+          <p class="font-hindi text-xs sm:text-sm text-textMuted leading-relaxed">
+            मंगलम् भगवान विष्णुः मंगलम् गरुड़ध्वजः ।<br/>
+            मंगलम् पुण्डरीकाक्षो मंगलाय तनोतु हरिः ॥
+          </p>
         </div>
-        <div style="font-size: 1.15rem; color: #f3c65f;">चि. अनुभव पाल एवं आयु. मनीषा सिंह</div>
-        <div class="date-badge">09 . 12 . 2026 • SHUBH VIVAH</div>
-        <p style="max-width: 420px; font-size: 1.1rem;">
-            Together with their beloved families, we cordially invite you to grace the auspicious wedding celebrations.
+
+        <svg class="w-12 h-12 sm:w-14 sm:h-14" viewBox="0 0 64 64" fill="none" style="transform: scaleX(-1);">
+          <path d="M46 50 C22 50, 10 36, 12 16 C22 23, 30 30, 38 40" fill="#1E6B52" fill-opacity="0.22" stroke="#C69725" stroke-width="2"/>
+          <circle cx="17" cy="21" r="2.5" fill="#630D16"/>
+          <circle cx="24" cy="28" r="2.5" fill="#C69725"/>
+          <circle cx="15" cy="32" r="2.5" fill="#1E6B52"/>
+          <path d="M38 50 C40 36, 46 25, 51 21 C54 19, 57 21, 55 24 C51 28, 48 39, 48 50 Z" fill="#1E6B52" stroke="#C69725" stroke-width="1.4"/>
+          <path d="M51 17 L50 12 M53 17 L55 12" stroke="#630D16" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <!-- Ornament Divider -->
+      <div class="flex items-center justify-center gap-3 my-4">
+        <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold"></span>
+        <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+        </svg>
+        <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold"></span>
+      </div>
+
+      <p class="uppercase tracking-[0.24em] text-xs font-bold text-gold mb-2" data-en="09.12.2026 • 07 – 11 DECEMBER 2026 | LUCKNOW & GORAKHPUR" data-hi="०९.१२.२०२६ • ०७ – ११ दिसम्बर २०२६ | लखनऊ एवं गोरखपुर">
+        09.12.2026 • 07 – 11 DECEMBER 2026 | LUCKNOW & GORAKHPUR
+      </p>
+
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold gold-shimmer py-1 leading-tight">
+        Anubhav <span class="italic font-normal text-4xl sm:text-5xl">&</span> Manisha
+      </h1>
+
+      <p class="font-hindi text-base sm:text-lg text-maroon mt-2">
+        परमपिता परमेश्वर की असीम अनुकम्पा से <span class="font-bold">॥ शुभ पाणिग्रहण संस्कार ॥</span>
+      </p>
+
+      <p class="mt-3 text-sm sm:text-base text-textMuted max-w-xl mx-auto leading-relaxed" data-en="We cordially request the pleasure of your gracious company and blessings on the auspicious occasion of the wedding of our beloved children." data-hi="की मधुर बेला पर पधार कर नव-युगल को अपने स्नेहिल आशीर्वाद की मृदुल ज्योत्स्ना से अभिसिंचित कर हमें अनुगृहीत करें।">
+        We cordially request the pleasure of your gracious company and blessings on the auspicious occasion of the wedding of our beloved children.
+      </p>
+
+      <!-- Custom SVG Royal Dulha & Dulhan Mandap Portrait -->
+      <div class="my-8 rounded-3xl bg-gradient-to-b from-ivory via-cream to-goldSoft/60 p-4 sm:p-7 border-2 border-gold/60 shadow-inner">
+        <svg class="w-full max-w-xl h-auto mx-auto" viewBox="0 0 540 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Royal Indian Groom Dulha and Bride Dulhan under Floral Mandap Arch">
+          <defs>
+            <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#9A6B08"/>
+              <stop offset="50%" stop-color="#DFBE5B"/>
+              <stop offset="100%" stop-color="#8C5E05"/>
+            </linearGradient>
+            <linearGradient id="crimsonBridal" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#8C1422"/>
+              <stop offset="100%" stop-color="#570A13"/>
+            </linearGradient>
+            <linearGradient id="ivorySherwani" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFFDF9"/>
+              <stop offset="100%" stop-color="#EADAC0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Floral Mandap Pillars -->
+          <rect x="48" y="88" width="14" height="162" rx="3" fill="url(#goldFoil)" opacity="0.92"/>
+          <rect x="478" y="88" width="14" height="162" rx="3" fill="url(#goldFoil)" opacity="0.92"/>
+          <rect x="42" y="246" width="26" height="8" rx="2" fill="#630D16"/>
+          <rect x="472" y="246" width="26" height="8" rx="2" fill="#630D16"/>
+
+          <!-- Scalloped Palace Mandap Arch -->
+          <path d="M55 90 C55 48, 120 34, 175 40 C215 16, 325 16, 365 40 C420 34, 485 48, 485 90" stroke="url(#goldFoil)" stroke-width="4" fill="rgba(198,151,37,0.12)"/>
+          <path d="M68 90 C68 58, 125 46, 178 52 C215 28, 325 28, 362 52 C415 46, 472 58, 472 90" stroke="#630D16" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+          <!-- Hanging Marigold & Rose Strings -->
+          <g stroke="#D97706" stroke-width="1.2">
+            <line x1="95" y1="62" x2="95" y2="122"/>
+            <line x1="130" y1="53" x2="130" y2="108"/>
+            <line x1="410" y1="53" x2="410" y2="108"/>
+            <line x1="445" y1="62" x2="445" y2="122"/>
+          </g>
+          <g fill="#E07A16">
+            <circle cx="95" cy="76" r="4"/><circle cx="95" cy="92" r="4"/><circle cx="95" cy="108" r="4"/><circle cx="95" cy="122" r="4.5" fill="#8C1422"/>
+            <circle cx="130" cy="68" r="3.8"/><circle cx="130" cy="84" r="3.8"/><circle cx="130" cy="100" r="4.2" fill="#8C1422"/>
+            <circle cx="410" cy="68" r="3.8"/><circle cx="410" cy="84" r="3.8"/><circle cx="410" cy="100" r="4.2" fill="#8C1422"/>
+            <circle cx="445" cy="76" r="4"/><circle cx="445" cy="92" r="4"/><circle cx="445" cy="108" r="4"/><circle cx="445" cy="122" r="4.5" fill="#8C1422"/>
+          </g>
+
+          <!-- Central Mandap Kalash Finial -->
+          <path d="M254 22 C254 10, 270 5, 270 2 C270 5, 286 10, 286 22 Z" fill="url(#goldFoil)"/>
+
+          <!-- ROYAL DULHA (GROOM) - LEFT -->
+          <g transform="translate(155, 76)">
+            <circle cx="52" cy="46" r="34" fill="rgba(223,190,91,0.22)" stroke="#C69725" stroke-width="1.2" stroke-dasharray="3 2"/>
+            <path d="M35 34 C35 16, 69 16, 69 34 Z" fill="url(#crimsonBridal)" stroke="#DFBE5B" stroke-width="1.6"/>
+            <path d="M35 30 Q52 22 69 30" stroke="#F3D479" stroke-width="2.5"/>
+            <path d="M62 20 C70 8, 78 12, 72 22 Z" fill="#F3D479" stroke="#630D16" stroke-width="1"/>
+            <circle cx="62" cy="22" r="3" fill="#FFFDF9" stroke="#C69725"/>
+            <path d="M39 34 C39 48, 65 48, 65 34 Z" fill="#F4C7A1" stroke="#8C583A" stroke-width="1.2"/>
+            <circle cx="47" cy="38" r="1.3" fill="#2E090D"/>
+            <circle cx="57" cy="38" r="1.3" fill="#2E090D"/>
+            <path d="M49 43 Q52 45 55 43" stroke="#8C1422" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M26 54 C28 48, 76 48, 78 54 L86 142 H18 Z" fill="url(#ivorySherwani)" stroke="#C69725" stroke-width="1.8"/>
+            <line x1="52" y1="50" x2="52" y2="142" stroke="#C69725" stroke-width="2"/>
+            <circle cx="52" cy="64" r="1.8" fill="#630D16"/>
+            <circle cx="52" cy="76" r="1.8" fill="#630D16"/>
+            <circle cx="52" cy="88" r="1.8" fill="#630D16"/>
+            <path d="M34 50 L24 128 L34 132 L42 52 Z" fill="url(#crimsonBridal)" stroke="#F3D479" stroke-width="1.1"/>
+            <path d="M40 52 Q52 72 64 52" stroke="#1E6B52" stroke-width="2.5" fill="none"/>
+            <path d="M42 52 Q52 66 62 52" stroke="#DFBE5B" stroke-width="1.5" fill="none"/>
+            <path d="M37 54 Q52 86 67 54" stroke="#E07A16" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M37 54 Q52 86 67 54" stroke="#FBBF24" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round" fill="none"/>
+            <rect x="34" y="142" width="13" height="26" fill="#FAF2E4" stroke="#C69725" stroke-width="1.2"/>
+            <rect x="57" y="142" width="13" height="26" fill="#FAF2E4" stroke="#C69725" stroke-width="1.2"/>
+            <path d="M32 168 H49 L52 174 H30 Z" fill="#630D16" stroke="#F3D479" stroke-width="1"/>
+            <path d="M55 168 H72 L75 174 H53 Z" fill="#630D16" stroke="#F3D479" stroke-width="1"/>
+          </g>
+
+          <!-- ROYAL DULHAN (BRIDE) - RIGHT -->
+          <g transform="translate(278, 80)">
+            <circle cx="54" cy="44" r="34" fill="rgba(223,190,91,0.22)" stroke="#C69725" stroke-width="1.2" stroke-dasharray="3 2"/>
+            <path d="M28 32 C24 14, 84 14, 80 32 L96 146 H12 Z" fill="url(#crimsonBridal)" stroke="#F3D479" stroke-width="1.8"/>
+            <path d="M32 30 C32 18, 76 18, 76 30" stroke="#FBBF24" stroke-width="2.5"/>
+            <path d="M41 32 C41 46, 67 46, 67 32 Z" fill="#F7D0AE" stroke="#8C583A" stroke-width="1.2"/>
+            <line x1="54" y1="22" x2="54" y2="29" stroke="#F3D479" stroke-width="1.5"/>
+            <circle cx="54" cy="30" r="2.2" fill="#F3D479" stroke="#630D16" stroke-width="0.8"/>
+            <circle cx="48" cy="36" r="1.3" fill="#2E090D"/>
+            <circle cx="60" cy="36" r="1.3" fill="#2E090D"/>
+            <circle cx="54" cy="34" r="1.1" fill="#8C1422"/>
+            <path d="M51 41 Q54 43 57 41" stroke="#8C1422" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M38 50 H70 L74 78 H34 Z" fill="#630D16" stroke="#F3D479" stroke-width="1.4"/>
+            <path d="M34 78 H74 L94 166 H14 Z" fill="url(#crimsonBridal)" stroke="#F3D479" stroke-width="2"/>
+            <line x1="45" y1="78" x2="34" y2="166" stroke="#F3D479" stroke-width="1.2"/>
+            <line x1="54" y1="78" x2="54" y2="166" stroke="#F3D479" stroke-width="1.2"/>
+            <line x1="63" y1="78" x2="74" y2="166" stroke="#F3D479" stroke-width="1.2"/>
+            <path d="M16 156 H92" stroke="#F3D479" stroke-width="3.5"/>
+            <path d="M44 50 Q54 62 64 50" stroke="#F3D479" stroke-width="2.5" fill="none"/>
+            <path d="M40 52 Q54 82 68 52" stroke="#E07A16" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M40 52 Q54 82 68 52" stroke="#FBBF24" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round" fill="none"/>
+          </g>
+
+          <!-- Sacred Havan Kund Base -->
+          <rect x="115" y="250" width="310" height="10" rx="5" fill="url(#goldFoil)"/>
+          <path d="M248 250 L254 238 H286 L292 250 Z" fill="#630D16" stroke="#F3D479" stroke-width="1.2"/>
+          <path d="M270 237 C264 230, 267 222, 270 218 C273 222, 276 230, 270 237 Z" fill="#F59E0B"/>
+          <path d="M270 236 C267 232, 268 227, 270 224 C272 227, 273 232, 270 236 Z" fill="#FEF08A"/>
+        </svg>
+
+        <p class="font-hindi text-maroon font-bold text-sm sm:text-base mt-2">
+          ॥ चि. अनुभव पाल संग आयु. मनीषा सिंह ॥
         </p>
-        <button class="open-btn" onclick="openInvitation()">Open Royal Invitation ➔</button>
-    </div>
+      </div>
 
-    <div id="main-card">
-        <div class="ganesh">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ॥</div>
-        <h2 style="font-size: 1.8rem; margin-top: 10px;">Wedding Invitation</h2>
-        <p>With the heavenly blessings of our elders, we request the pleasure of your company at the marriage ceremony of</p>
-        
-        <div class="section-box">
-            <div class="couple-title" style="font-size: 1.9rem;">
-                Anubhav Pal
-                <span class="weds-text">with</span>
-                Manisha Singh
+      <!-- Live Countdown Timer to Wednesday, December 9, 2026 -->
+      <div class="pt-6 border-t border-gold/40">
+        <p class="uppercase tracking-[0.22em] text-[11px] font-bold text-maroon mb-4" data-en="Counting Down to Shubh Vivah — 09.12.2026" data-hi="शुभ विवाह में शेष समय — ०९.१२.२०२६">
+          Counting Down to Shubh Vivah — 09.12.2026
+        </p>
+
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto">
+          <div class="rounded-2xl bg-maroon border border-goldLight/60 p-3 sm:p-4 shadow-md">
+            <span id="cd-days" class="block font-serif text-2xl sm:text-4xl font-bold text-goldLight">00</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-goldSoft" data-en="Days" data-hi="दिन">Days</span>
+          </div>
+          <div class="rounded-2xl bg-maroon border border-goldLight/60 p-3 sm:p-4 shadow-md">
+            <span id="cd-hours" class="block font-serif text-2xl sm:text-4xl font-bold text-goldLight">00</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-goldSoft" data-en="Hours" data-hi="घंटे">Hours</span>
+          </div>
+          <div class="rounded-2xl bg-maroon border border-goldLight/60 p-3 sm:p-4 shadow-md">
+            <span id="cd-mins" class="block font-serif text-2xl sm:text-4xl font-bold text-goldLight">00</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-goldSoft" data-en="Mins" data-hi="मिनट">Mins</span>
+          </div>
+          <div class="rounded-2xl bg-maroon border border-goldLight/60 p-3 sm:p-4 shadow-md">
+            <span id="cd-secs" class="block font-serif text-2xl sm:text-4xl font-bold text-ivory">00</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-goldSoft" data-en="Secs" data-hi="सेकंड">Secs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. COUPLE & FAMILY LINEAGE SECTION ==================== -->
+    <section id="couple" class="mt-16 sm:mt-20 reveal">
+      <div class="text-center mb-8">
+        <p class="uppercase tracking-[0.25em] text-xs font-bold text-goldLight" data-en="With Heavenly Blessings" data-hi="स्नेही स्वजन">
+          With Heavenly Blessings
+        </p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ivory mt-1" data-en="The Groom & The Bride" data-hi="वर एवं वधू परिचय">
+          The Groom & The Bride
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        <!-- Groom Card -->
+        <div class="rounded-3xl bg-cream p-7 sm:p-9 text-center royal-frame flex flex-col justify-between">
+          <div>
+            <span class="inline-block rounded-full bg-maroon border border-goldLight/60 px-4 py-1 text-xs font-bold tracking-widest uppercase text-goldLight mb-4" data-en="The Groom" data-hi="वर">
+              The Groom
+            </span>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-maroon">
+              Chiranjeevi Anubhav Pal
+            </h3>
+            <p class="font-hindi text-lg font-semibold text-maroon/90 mt-1">
+              चि. अनुभव पाल
+            </p>
+            <div class="my-4 h-px w-24 bg-gold/60 mx-auto"></div>
+            <p class="text-sm text-textPrimary leading-relaxed font-semibold" data-en="Son of Smt. Archana Pal & Late Satyendra Bahadur Pal" data-hi="सुपुत्र श्रीमती अर्चना पाल एवं स्व० सत्येन्द्र बहादुर पाल">
+              Son of Smt. Archana Pal & Late Satyendra Bahadur Pal
+            </p>
+            <p class="text-xs sm:text-sm text-textMuted mt-2 leading-relaxed" data-en="Grandson of Late Sheetlabaksh Pal & Late Shyamlata Pal" data-hi="सुपौत्र स्व० शीतलाबक्स पाल एवं स्व० श्यामलता पाल">
+              Grandson of Late Sheetlabaksh Pal & Late Shyamlata Pal
+            </p>
+          </div>
+          <p class="mt-6 text-xs uppercase tracking-widest text-gold font-bold">
+            Kalyanpur, Lucknow
+          </p>
+        </div>
+
+        <!-- Bride Card -->
+        <div class="rounded-3xl bg-cream p-7 sm:p-9 text-center royal-frame flex flex-col justify-between">
+          <div>
+            <span class="inline-block rounded-full bg-maroon border border-goldLight/60 px-4 py-1 text-xs font-bold tracking-widest uppercase text-goldLight mb-4" data-en="The Bride" data-hi="वधू">
+              The Bride
+            </span>
+            <h3 class="font-serif text-3xl sm:text-4xl font-bold text-maroon">
+              Ayushmati Manisha Singh
+            </h3>
+            <p class="font-hindi text-lg font-semibold text-maroon/90 mt-1">
+              आयु. मनीषा सिंह
+            </p>
+            <div class="my-4 h-px w-24 bg-gold/60 mx-auto"></div>
+            <p class="text-sm text-textPrimary leading-relaxed font-semibold" data-en="Daughter of Smt. Geeta Singh & Shri Madan Kumar Singh" data-hi="सुपुत्री श्रीमती गीता सिंह एवं श्री मदन कुमार सिंह">
+              Daughter of Smt. Geeta Singh & Shri Madan Kumar Singh
+            </p>
+            <p class="text-xs sm:text-sm text-textMuted mt-2 leading-relaxed" data-en="Granddaughter of Late Shyam Bihari Singh & Late Chinta Devi" data-hi="सुपौत्री स्व० श्याम बिहारी सिंह एवं स्व० चिन्ता देवी">
+              Granddaughter of Late Shyam Bihari Singh & Late Chinta Devi
+            </p>
+          </div>
+          <p class="mt-6 text-xs uppercase tracking-widest text-gold font-bold">
+            Pipraich, Gorakhpur
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. MANGALIK KARYAKRAM (5 WEDDING EVENTS) ==================== -->
+    <section id="events" class="mt-16 sm:mt-24 reveal">
+      <div class="text-center mb-12">
+        <p class="font-hindi text-goldLight font-bold text-lg sm:text-xl">
+          卐 ॥ मांगलिक कार्यक्रम ॥ 卐
+        </p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ivory mt-1" data-en="Mangalik Karyakram — Wedding Events" data-hi="शुभ विवाह समारोह एवं तिथियाँ">
+          Mangalik Karyakram — Wedding Events
+        </h2>
+        <p class="text-xs sm:text-sm text-goldSoft/85 mt-2" data-en="Save each auspicious ceremony directly to your calendar" data-hi="प्रत्येक मांगलिक कार्यक्रम को अपने कैलेंडर में जोड़ें">
+          Save each auspicious ceremony directly to your calendar
+        </p>
+      </div>
+
+      <div class="space-y-6">
+
+        <!-- Event 1: Tel / Matri Poojan -->
+        <div class="rounded-3xl bg-cream p-6 sm:p-8 royal-frame transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-maroon border border-goldLight/60 flex items-center justify-center shadow-sm">
+                <svg class="w-9 h-9 text-goldLight" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Sacred Kalash">
+                  <path d="M16 14 C11 9, 9 13, 14 17" stroke="#F3D479"/>
+                  <path d="M32 14 C37 9, 39 13, 34 17" stroke="#F3D479"/>
+                  <ellipse cx="24" cy="14" rx="6" ry="5" fill="#F3D479" fill-opacity="0.3" stroke="#F3D479"/>
+                  <path d="M16 19 H32 L29 23 C36 27, 36 38, 29 42 H19 C12 38, 12 27, 19 23 Z" fill="#FFFDF8" fill-opacity="0.12"/>
+                  <path d="M24 27 V36 M19.5 31.5 H28.5" stroke="#F3D479" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="rounded-full bg-maroon px-3.5 py-1 text-[11px] font-semibold tracking-wider uppercase text-ivory">
+                    Monday, 07 December 2026
+                  </span>
+                  <span class="rounded-full bg-ivory border border-gold/60 px-3 py-1 text-[11px] font-semibold text-maroon">
+                    सोमवार, ०७ दिसम्बर २०२६
+                  </span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon">
+                  Tel / Matri Poojan <span class="font-hindi text-xl sm:text-2xl font-normal text-gold ml-1">(तेल / मातृ पूजन)</span>
+                </h3>
+                <p class="text-sm text-textMuted mt-2 leading-relaxed" data-en="Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow" data-hi="निज निवास स्थान: प्लाट नं०-9 आनन्द विहार कॉलोनी, आई.आई.एस.ई. कॉलेज के निकट, कल्याणपुर, लखनऊ">
+                  Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow
+                </p>
+              </div>
             </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button type="button" onclick="downloadICS('Tel & Matri Poojan - Anubhav weds Manisha 09.12.2026', '20261207T100000', '20261207T140000', 'Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow')" class="inline-flex items-center gap-1.5 rounded-full bg-maroon px-4 py-2.5 text-xs font-semibold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm">
+                <span>+ Add to Calendar</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="section-box">
-            <h2>✨ Shubh Vivah & Reception ✨</h2>
-            <p class="highlight">Wednesday, 9th December 2026</p>
-            <p>Reception & Dinner: 7:00 PM Onwards</p>
-            <p style="margin-top: 8px; color: #ffd778;">Lucknow, Uttar Pradesh</p>
+        <!-- Event 2: Haldi & Mehendi -->
+        <div class="rounded-3xl bg-cream p-6 sm:p-8 royal-frame transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-maroon border border-goldLight/60 flex items-center justify-center shadow-sm">
+                <svg class="w-9 h-9 text-goldLight" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Marigold and Mehendi Lotus">
+                  <circle cx="24" cy="24" r="6" fill="#F59E0B" fill-opacity="0.4"/>
+                  <path d="M24 7 C28 14, 28 18, 24 20 C20 18, 20 14, 24 7 Z" fill="#F59E0B" fill-opacity="0.3"/>
+                  <path d="M24 41 C28 34, 28 30, 24 28 C20 30, 20 34, 24 41 Z" fill="#F59E0B" fill-opacity="0.3"/>
+                  <path d="M7 24 C14 20, 18 20, 20 24 C18 28, 14 28, 7 24 Z" fill="#10B981" fill-opacity="0.35" stroke="#6EE7B7"/>
+                  <path d="M41 24 C34 20, 30 20, 28 24 C30 28, 34 28, 41 24 Z" fill="#10B981" fill-opacity="0.35" stroke="#6EE7B7"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="rounded-full bg-maroon px-3.5 py-1 text-[11px] font-semibold tracking-wider uppercase text-ivory">
+                    Tuesday, 08 December 2026
+                  </span>
+                  <span class="rounded-full bg-ivory border border-gold/60 px-3 py-1 text-[11px] font-semibold text-maroon">
+                    मंगलवार, ०८ दिसम्बर २०२६
+                  </span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon">
+                  Haldi & Mehendi <span class="font-hindi text-xl sm:text-2xl font-normal text-gold ml-1">(हल्दी एवं मेंहदी)</span>
+                </h3>
+                <p class="text-sm text-textMuted mt-2 leading-relaxed" data-en="Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow" data-hi="निज निवास स्थान: प्लाट नं०-9 आनन्द विहार कॉलोनी, आई.आई.एस.ई. कॉलेज के निकट, कल्याणपुर, लखनऊ">
+                  Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button type="button" onclick="downloadICS('Haldi & Mehendi - Anubhav weds Manisha 09.12.2026', '20261208T110000', '20261208T170000', 'Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow')" class="inline-flex items-center gap-1.5 rounded-full bg-maroon px-4 py-2.5 text-xs font-semibold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm">
+                <span>+ Add to Calendar</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="section-box">
-            <h2>🙏 Darshanabhilashi 🙏</h2>
-            <p>All Pal Family & Relatives</p>
-            <p style="font-style: italic; margin-top: 10px; font-size: 1.1rem;">"Aapki upasthiti hamare parivar ke liye saubhagya hogi."</p>
+        <!-- Event 3: Shubh Vivah -->
+        <div class="rounded-3xl bg-gradient-to-br from-cream via-ivory to-goldSoft/65 p-6 sm:p-8 royal-frame transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-maroon border border-goldLight/65 flex items-center justify-center shadow-sm">
+                <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none" stroke-width="2.2" role="img" aria-label="Varmala Garlands">
+                  <circle cx="19" cy="24" r="11" stroke="#F59E0B" stroke-dasharray="3 2"/>
+                  <circle cx="29" cy="24" r="11" stroke="#F3D479"/>
+                  <circle cx="24" cy="14" r="2.5" fill="#FFFDF8"/>
+                  <circle cx="24" cy="34" r="2.5" fill="#FFFDF8"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="rounded-full bg-maroon px-3.5 py-1 text-[11px] font-bold tracking-wider uppercase text-goldLight">
+                    Wednesday, 09 December 2026 (09.12.2026)
+                  </span>
+                  <span class="rounded-full bg-ivory border border-gold/60 px-3 py-1 text-[11px] font-semibold text-maroon">
+                    बुधवार, ०९ दिसम्बर २०२६
+                  </span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon">
+                  Shubh Vivah <span class="font-hindi text-xl sm:text-2xl font-normal text-gold ml-1">(शुभ विवाह)</span>
+                </h3>
+                <p class="text-sm text-textMuted mt-2 leading-relaxed" data-en="Wedding Venue: Ward No. 11, Rama Mohalla, Gadhwa Chauraha, Pipraich, Dist. Gorakhpur" data-hi="विवाह स्थल: वार्ड नं०-11, रामा मोहल्ला, गढ़वा चौराहा, पिपराइच जिला-गोरखपुर">
+                  Wedding Venue: Ward No. 11, Rama Mohalla, Gadhwa Chauraha, Pipraich, Dist. Gorakhpur
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button type="button" onclick="downloadICS('Shubh Vivah - Anubhav weds Manisha 09.12.2026', '20261209T100000', '20261209T230000', 'Ward No. 11, Rama Mohalla, Gadhwa Chauraha, Pipraich, Dist. Gorakhpur')" class="inline-flex items-center gap-1.5 rounded-full bg-maroon px-4 py-2.5 text-xs font-semibold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm">
+                <span>+ Add to Calendar</span>
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
 
-    <script>
-        var song = document.getElementById("bg-music");
-        var musicBtn = document.getElementById("music-control");
+        <!-- Event 4: Vadhu Aagman -->
+        <div class="rounded-3xl bg-cream p-6 sm:p-8 royal-frame transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-maroon border border-goldLight/60 flex items-center justify-center shadow-sm">
+                <svg class="w-10 h-10 text-goldLight" viewBox="0 0 56 48" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Royal Doli Palki">
+                  <line x1="4" y1="22" x2="52" y2="22" stroke="#F3D479" stroke-width="2.4"/>
+                  <path d="M16 22 C16 11, 40 11, 40 22" fill="#F3D479" fill-opacity="0.3" stroke="#F3D479"/>
+                  <rect x="16" y="22" width="24" height="15" rx="2" fill="#FFFDF8" fill-opacity="0.15"/>
+                  <path d="M22 22 V37 M34 22 V37" stroke="#F3D479" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="rounded-full bg-maroon px-3.5 py-1 text-[11px] font-semibold tracking-wider uppercase text-ivory">
+                    Thursday, 10 December 2026
+                  </span>
+                  <span class="rounded-full bg-ivory border border-gold/60 px-3 py-1 text-[11px] font-semibold text-maroon">
+                    बृहस्पतिवार, १० दिसम्बर २०२६
+                  </span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon">
+                  Vadhu Aagman <span class="font-hindi text-xl sm:text-2xl font-normal text-gold ml-1">(वधू आगमन)</span>
+                </h3>
+                <p class="text-sm text-textMuted mt-2 leading-relaxed" data-en="Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow" data-hi="निज निवास स्थान: प्लाट नं०-9 आनन्द विहार कॉलोनी, आई.आई.एस.ई. कॉलेज के निकट, कल्याणपुर, लखनऊ">
+                  Residence: Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button type="button" onclick="downloadICS('Vadhu Aagman - Anubhav weds Manisha 09.12.2026', '20261210T120000', '20261210T180000', 'Plot No. 9, Anand Vihar Colony, Near I.I.S.E. College, Kalyanpur, Lucknow')" class="inline-flex items-center gap-1.5 rounded-full bg-maroon px-4 py-2.5 text-xs font-semibold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm">
+                <span>+ Add to Calendar</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
-        function openInvitation() {
-            document.getElementById("cover").classList.add("hidden");
-            musicBtn.style.display = "block";
-            song.volume = 1.0;
-            song.play();
+        <!-- Event 5: Bahubhoj / Reception -->
+        <div class="rounded-3xl bg-gradient-to-br from-cream via-ivory to-goldSoft/65 p-6 sm:p-8 royal-frame transition-transform duration-300 hover:-translate-y-1">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 shrink-0 rounded-2xl bg-maroon border border-goldLight/65 flex items-center justify-center shadow-sm">
+                <svg class="w-9 h-9 text-goldLight" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8" role="img" aria-label="Palace Chhatri">
+                  <path d="M8 22 C8 12, 22 7, 22 4 C22 7, 36 12, 36 22 Z" fill="#F3D479" fill-opacity="0.3" stroke="#F3D479"/>
+                  <line x1="13" y1="22" x2="13" y2="36" stroke="#FFFDF8" stroke-width="2"/>
+                  <line x1="31" y1="22" x2="31" y2="36" stroke="#FFFDF8" stroke-width="2"/>
+                  <line x1="6" y1="36" x2="38" y2="36" stroke="#F3D479" stroke-width="2.2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="rounded-full bg-maroon px-3.5 py-1 text-[11px] font-bold tracking-wider uppercase text-goldLight">
+                    Friday, 11 December 2026 • Evening 7:00 PM Onwards
+                  </span>
+                  <span class="rounded-full bg-ivory border border-gold/60 px-3 py-1 text-[11px] font-semibold text-maroon">
+                    शुक्रवार, ११ दिसम्बर २०२६ • सायं 7:00 बजे से
+                  </span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon">
+                  Bahubhoj / Reception <span class="font-hindi text-xl sm:text-2xl font-normal text-gold ml-1">(बहुभोज / प्रीतिभोज)</span>
+                </h3>
+                <p class="text-sm text-textMuted mt-2 leading-relaxed" data-en="Venue: The Revanta, Sitapur Road, Near Ultima Park, New CDRI Campus, Bhitauli, Lucknow" data-hi="प्रीतिभोज स्थल: द रेवान्ता, सीतापुर रोड, निकट अल्टीमा पार्क, न्यू सी०डी०आर०आई० कैम्पस, भिटौली लखनऊ">
+                  Venue: The Revanta, Sitapur Road, Near Ultima Park, New CDRI Campus, Bhitauli, Lucknow
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button type="button" onclick="downloadICS('Bahubhoj / Reception - Anubhav weds Manisha 09.12.2026', '20261211T190000', '20261211T233000', 'The Revanta, Sitapur Road, Near Ultima Park, New CDRI Campus, Bhitauli, Lucknow')" class="inline-flex items-center gap-1.5 rounded-full bg-maroon px-4 py-2.5 text-xs font-semibold text-goldLight hover:bg-crimson transition-colors cursor-pointer shadow-sm">
+                <span>+ Add to Calendar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. SHAHI BARAAT PROCESSION SECTION (HATHI, GHODA, DHOL-SHEHNAI) ==================== -->
+    <section id="baraat" class="mt-16 sm:mt-24 reveal">
+      <div class="rounded-3xl bg-gradient-to-br from-cream via-ivory to-goldSoft/60 p-6 sm:p-10 royal-frame text-center overflow-hidden">
+        <p class="font-hindi text-maroon font-bold text-base sm:text-lg">
+          ॥ बारात आमंत्रण एवं शाही शोभायात्रा ॥
+        </p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-maroon mt-1" data-en="Shahi Baraat Procession" data-hi="शाही बारात प्रस्थान — लखनऊ से गोरखपुर">
+          Shahi Baraat Procession
+        </h2>
+
+        <!-- Wide Custom SVG Royal Baraat Procession Banner -->
+        <div class="my-6 rounded-2xl bg-ivory border-2 border-gold/60 p-3 sm:p-6 shadow-inner">
+          <svg class="w-full max-w-3xl h-auto mx-auto" viewBox="0 0 760 225" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wide Royal Baraat Procession Banner with Elephant Hathi, Horse Ghoda, and Dhol-Shehnai">
+            <g opacity="0.2" fill="#C69725">
+              <path d="M60 185 V135 C60 115, 90 100, 90 92 C90 100, 120 115, 120 135 V185 Z"/>
+              <path d="M330 185 V120 C330 95, 380 78, 380 68 C380 78, 430 95, 430 120 V185 Z"/>
+              <path d="M640 185 V135 C640 115, 670 100, 670 92 C670 100, 700 115, 700 135 V185 Z"/>
+            </g>
+
+            <!-- 1. CAPARISONED ROYAL ELEPHANT (SHAHI HATHI) -->
+            <g transform="translate(55, 22)">
+              <line x1="125" y1="6" x2="125" y2="48" stroke="#8C5E05" stroke-width="3"/>
+              <path d="M88 24 C95 6, 155 6, 162 24 Z" fill="#8C1422" stroke="#DFBE5B" stroke-width="2"/>
+              <path d="M88 24 Q106 30 125 24 Q144 30 162 24" stroke="#FBBF24" stroke-width="2"/>
+              <circle cx="125" cy="5" r="3.5" fill="#DFBE5B"/>
+
+              <rect x="96" y="44" width="58" height="24" rx="4" fill="#C69725" stroke="#630D16" stroke-width="1.8"/>
+              <rect x="102" y="49" width="46" height="14" rx="2" fill="#FFFDF9" stroke="#630D16" stroke-width="1"/>
+
+              <path d="M55 110 C55 72, 175 68, 188 104 C194 120, 190 142, 184 150 V176 H162 V146 H138 V176 H116 V146 H92 V176 H70 V142 C60 134, 55 122, 55 110 Z" fill="#6E655F" stroke="#2E090D" stroke-width="2"/>
+              <path d="M178 88 C202 82, 222 96, 220 118 C218 134, 232 138, 238 124 C242 115, 234 108, 228 114 C224 118, 230 124, 235 120" stroke="#2E090D" stroke-width="14" stroke-linecap="round" fill="none"/>
+              <path d="M178 88 C202 82, 222 96, 220 118 C218 134, 232 138, 238 124 C242 115, 234 108, 228 114" stroke="#6E655F" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M204 122 Q222 128 232 116" stroke="#FFFDF9" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="232" cy="116" r="2.2" fill="#DFBE5B"/>
+
+              <path d="M74 70 H172 L178 134 H68 Z" fill="#630D16" stroke="#DFBE5B" stroke-width="2.5"/>
+              <rect x="82" y="78" width="84" height="46" rx="4" fill="none" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <circle cx="124" cy="101" r="14" fill="#C69725" stroke="#FFFDF9" stroke-width="1.5"/>
+              <circle cx="124" cy="101" r="7" fill="#630D16"/>
+
+              <path d="M172 86 C160 88, 158 114, 174 116 C184 116, 184 90, 172 86 Z" fill="#5B534E" stroke="#DFBE5B" stroke-width="1.5"/>
+              <path d="M192 84 L214 96 L204 110 L186 96 Z" fill="#8C1422" stroke="#DFBE5B" stroke-width="1.5"/>
+              <circle cx="196" cy="95" r="2" fill="#FFFDF9"/>
+              <rect x="68" y="168" width="26" height="5" rx="2" fill="#DFBE5B"/>
+              <rect x="114" y="168" width="26" height="5" rx="2" fill="#DFBE5B"/>
+              <rect x="160" y="168" width="26" height="5" rx="2" fill="#DFBE5B"/>
+            </g>
+
+            <!-- 2. CEREMONIAL BARAAT HORSE (SHAHI GHODA) -->
+            <g transform="translate(345, 42)">
+              <line x1="78" y1="2" x2="78" y2="54" stroke="#8C5E05" stroke-width="2.5"/>
+              <path d="M46 18 C54 2, 102 2, 110 18 Z" fill="#8C1422" stroke="#DFBE5B" stroke-width="1.8"/>
+
+              <path d="M44 92 C44 74, 118 74, 126 92 L134 156 H120 L114 118 H96 L92 156 H78 L76 118 H58 L44 152 L32 146 L46 112 C42 104, 42 98, 44 92 Z" fill="#FFFDF9" stroke="#630D16" stroke-width="2"/>
+              <path d="M44 90 C22 94, 16 122, 24 142 C30 130, 34 114, 44 106" fill="#EBD9B9" stroke="#8C5E05" stroke-width="1.5"/>
+              <path d="M112 86 C118 58, 134 44, 148 48 L158 68 C154 74, 144 74, 140 68 L132 90 Z" fill="#FFFDF9" stroke="#630D16" stroke-width="2"/>
+              <path d="M144 46 C146 30, 158 28, 152 46 Z" fill="#8C1422" stroke="#DFBE5B" stroke-width="1.2"/>
+              <path d="M138 52 L152 64 M124 84 Q142 90 146 72" stroke="#8C1422" stroke-width="3"/>
+              <circle cx="144" cy="54" r="2" fill="#2E090D"/>
+
+              <path d="M62 76 H108 L112 106 H58 Z" fill="#630D16" stroke="#DFBE5B" stroke-width="2"/>
+              <rect x="66" y="81" width="38" height="19" fill="none" stroke="#FBBF24" stroke-width="1.2"/>
+
+              <path d="M72 76 L76 44 H96 L100 76 Z" fill="#FFFDF8" stroke="#C69725" stroke-width="1.5"/>
+              <circle cx="86" cy="36" r="7" fill="#F4C7A1" stroke="#8C583A" stroke-width="1"/>
+              <path d="M78 34 C78 24, 94 24, 94 34 Z" fill="#8C1422" stroke="#DFBE5B" stroke-width="1.2"/>
+            </g>
+
+            <!-- 3. DHOL-SHEHNAI MUSICIANS MOTIF -->
+            <g transform="translate(555, 78)">
+              <path d="M18 46 L68 24 L74 36 L22 50 Z" fill="url(#goldFoil)" stroke="#630D16" stroke-width="1.4"/>
+              <ellipse cx="71" cy="30" rx="3" ry="7" transform="rotate(-22 71 30)" fill="#630D16"/>
+              <circle cx="88" cy="18" r="2.5" fill="#C69725"/>
+              <circle cx="102" cy="10" r="2" fill="#8C1422"/>
+              <circle cx="96" cy="28" r="2" fill="#D97706"/>
+
+              <rect x="26" y="72" width="66" height="42" rx="8" fill="#630D16" stroke="#DFBE5B" stroke-width="2.2"/>
+              <ellipse cx="26" cy="93" rx="6" ry="21" fill="#FFFDF9" stroke="#C69725" stroke-width="1.8"/>
+              <ellipse cx="92" cy="93" rx="6" ry="21" fill="#FFFDF9" stroke="#C69725" stroke-width="1.8"/>
+              <path d="M32 76 L46 110 L60 76 L74 110 L86 76" stroke="#FBBF24" stroke-width="1.8" fill="none"/>
+              <line x1="42" y1="54" x2="76" y2="70" stroke="#8C5E05" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="76" y1="54" x2="42" y2="70" stroke="#8C5E05" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+            <rect x="30" y="198" width="700" height="8" rx="4" fill="url(#goldFoil)"/>
+            <line x1="45" y1="212" x2="715" y2="212" stroke="#630D16" stroke-width="1.2" stroke-dasharray="6 4"/>
+          </svg>
+        </div>
+
+        <p class="font-hindi text-sm sm:text-base text-textPrimary max-w-2xl mx-auto leading-relaxed mb-6">
+          बारात हमारे निज निवास स्थान <strong>प्लाट नं०-9 आनन्द विहार कॉलोनी, आई.आई.एस.ई. कॉलेज के निकट, कल्याणपुर, लखनऊ</strong> से <strong>बुधवार, 09 दिसम्बर 2026 को प्रातः काल 10:00 बजे</strong> विवाह स्थल <strong>वार्ड नं०-11, रामा मोहल्ला, गढ़वा चौराहा, पिपराइच जिला-गोरखपुर</strong> के लिए प्रस्थान करेगी।
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-3xl mx-auto mb-6">
+          <div class="rounded-2xl bg-ivory border border-gold/60 p-5">
+            <p class="text-[11px] uppercase tracking-widest font-bold text-gold mb-1">
+              Baraat Departure • 10:00 AM Sharp
+            </p>
+            <p class="font-serif text-xl font-bold text-maroon">
+              Wednesday, 09 December 2026
+            </p>
+            <p class="text-xs sm:text-sm text-textMuted mt-1 leading-relaxed">
+              From <strong>Nij Niwas, Plot No. 9, Anand Vihar Colony</strong>, Near I.I.S.E. College, Kalyanpur, Lucknow
+            </p>
+          </div>
+          <div class="rounded-2xl bg-ivory border border-gold/60 p-5">
+            <p class="text-[11px] uppercase tracking-widest font-bold text-maroon mb-1">
+              Destination Wedding Venue
+            </p>
+            <p class="font-serif text-xl font-bold text-maroon">
+              Pipraich, Dist. Gorakhpur
+            </p>
+            <p class="text-xs sm:text-sm text-textMuted mt-1 leading-relaxed">
+              <strong>Ward No. 11, Rama Mohalla</strong>, Gadhwa Chauraha, Pipraich, Dist. Gorakhpur
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a href="https://maps.google.com/?q=Anand+Vihar+Colony+Near+IISE+College+Kalyanpur+Lucknow" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-ivory border border-gold/70 px-5 py-2.5 text-xs font-bold text-maroon hover:bg-goldSoft/60 transition-colors">
+            <span>Departure Point Map (Lucknow)</span>
+            <span>↗</span>
+          </a>
+          <a href="https://maps.google.com/?q=Pipraich+Gorakhpur+Uttar+Pradesh" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-maroon px-5 py-2.5 text-xs font-bold text-goldLight hover:bg-crimson transition-colors shadow-sm">
+            <span>Wedding Venue Map (Gorakhpur)</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. RECEPTION VENUE SPOTLIGHT, FAMILY HOSTS & WHATSAPP SHARE ==================== -->
+    <section id="venue" class="mt-16 sm:mt-24 reveal">
+      <div class="rounded-3xl bg-cream p-7 sm:p-12 royal-frame text-center">
+        <p class="font-hindi text-maroon font-bold text-base sm:text-lg">
+          ॥ प्रीतिभोज स्थल ॥
+        </p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-maroon mt-1" data-en="Reception Venue Spotlight" data-hi="प्रीतिभोज एवं बहुभोज समारोह">
+          Reception Venue Spotlight
+        </h2>
+
+        <div class="mt-6 max-w-xl mx-auto rounded-3xl bg-ivory border-2 border-gold/70 p-6 sm:p-8 shadow-sm">
+          <span class="inline-block rounded-full bg-maroon px-4 py-1 text-xs font-bold tracking-wider uppercase text-goldLight mb-3">
+            Friday, 11 December 2026 • Evening 7:00 PM Onwards
+          </span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-maroon">
+            The Revanta <span class="font-hindi text-xl font-semibold text-gold">(द रेवान्ता)</span>
+          </h3>
+          <p class="text-sm text-textPrimary mt-2 leading-relaxed">
+            Sitapur Road, Near Ultima Park, New CDRI Campus, Bhitauli, Lucknow
+          </p>
+          <p class="font-hindi text-xs sm:text-sm text-textMuted mt-1">
+            सीतापुर रोड, निकट अल्टीमा पार्क, न्यू सी०डी०आर०आई० कैम्पस, भिटौली लखनऊ
+          </p>
+
+          <div class="mt-5">
+            <a href="https://maps.google.com/?q=The+Revanta+Sitapur+Road+Bhitauli+Lucknow" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-maroon px-6 py-3 text-xs sm:text-sm font-bold text-goldLight hover:bg-crimson transition-colors shadow-md">
+              <svg class="w-4 h-4 text-goldLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Open The Revanta on Google Maps</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Darshanabhilashi & Vinit Family Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-10 max-w-2xl mx-auto">
+          <!-- Darshanabhilashi -->
+          <div class="rounded-2xl bg-ivory p-6 border border-gold/60 shadow-sm">
+            <p class="font-hindi text-base font-bold text-maroon mb-1">
+              दर्शनाभिलाषी :
+            </p>
+            <p class="text-[11px] uppercase tracking-widest font-semibold text-gold mb-2">
+              Darshanabhilashi
+            </p>
+            <p class="font-serif text-xl font-bold text-textPrimary">
+              Gaurav Pal, Abhay Pal
+            </p>
+            <p class="font-hindi text-sm text-textMuted mt-1">
+              गौरव पाल, अभय पाल<br/>
+              <span class="font-bold text-maroon">एवं समस्त सूर्यवंशी परिवार</span>
+            </p>
+            <p class="text-xs text-textMuted mt-1">
+              & Samast Suryavanshi Parivaar
+            </p>
+          </div>
+
+          <!-- Vinit -->
+          <div class="rounded-2xl bg-ivory p-6 border border-gold/60 shadow-sm">
+            <p class="font-hindi text-base font-bold text-maroon mb-1">
+              विनीत :
+            </p>
+            <p class="text-[11px] uppercase tracking-widest font-semibold text-gold mb-2">
+              Vinit
+            </p>
+            <p class="font-serif text-xl font-bold text-textPrimary">
+              Smt. Archana Pal & Pal Family
+            </p>
+            <p class="font-hindi text-sm text-textMuted mt-1">
+              श्रीमती अर्चना पाल एवं समस्त पाल परिवार<br/>
+              <span class="font-bold text-maroon">कल्याणपुर, लखनऊ (उ.प्र.)</span>
+            </p>
+            <p class="text-xs text-textMuted mt-1">
+              Kalyanpur, Lucknow (U.P.)
+            </p>
+          </div>
+        </div>
+
+        <!-- Bal Manuhar & WhatsApp Share Footer -->
+        <div class="mt-10 pt-8 border-t border-gold/40 max-w-xl mx-auto">
+          <p class="font-hindi text-sm sm:text-base italic text-maroon font-semibold">
+            "मेले में जाने का मन तो बहुत है, पर क्या करूँ... मेरे चाचू / भैया की शादी जो है!"
+          </p>
+          <p class="text-xs text-textMuted mt-2">
+            Your gracious presence and blessings will make our celebration truly memorable.
+          </p>
+
+          <button
+            type="button"
+            onclick="shareOnWhatsApp()"
+            class="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold via-goldLight to-gold px-7 py-3 text-xs sm:text-sm font-extrabold text-royalDark shadow-goldGlow hover:brightness-105 transition-all cursor-pointer border border-maroon/30"
+          >
+            <span>Share Royal Invitation on WhatsApp</span>
+          </button>
+
+          <p class="mt-6 text-[11px] tracking-[0.25em] uppercase text-gold font-bold">
+            #AnubhavWedsManisha • 09.12.2026
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== CLEAN INTERACTIVE JAVASCRIPT WITH 1-MINUTE LYRICS LOOP ==================== -->
+  <script>
+    let isMusicPlaying = false;
+    // Song beech ki lyrics (28th second) se start hoga aur 60 second (1 minute) bajne ke baad wahi hissa repeat hoga
+    const LYRICS_START_SEC = 28;
+    const LOOP_DURATION_SEC = 60;
+
+    function updateMusicUI(playing) {
+      isMusicPlaying = playing;
+      const btn = document.getElementById('music-toggle');
+      const label = document.getElementById('music-label');
+      if (!btn || !label) return;
+      if (playing) {
+        btn.classList.add('music-playing', 'bg-crimson');
+        label.textContent = currentLang === 'hi' ? 'बज रहा है' : 'Playing';
+      } else {
+        btn.classList.remove('music-playing', 'bg-crimson');
+        label.textContent = currentLang === 'hi' ? 'संगीत' : 'Song';
+      }
+    }
+
+    function playWeddingMusic() {
+      const audio = document.getElementById('weddingAudio');
+      if (!audio) return;
+      try {
+        if (audio.currentTime < LYRICS_START_SEC || audio.currentTime >= (LYRICS_START_SEC + LOOP_DURATION_SEC)) {
+          audio.currentTime = LYRICS_START_SEC;
         }
-
-        function toggleMusic() {
-            if (song.paused) {
-                song.play();
-                musicBtn.innerHTML = "🔊";
-            } else {
-                song.pause();
-                musicBtn.innerHTML = "🔇";
-            }
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => updateMusicUI(true))
+            .catch(() => updateMusicUI(false));
         }
-    </script>
+      } catch (e) {
+        updateMusicUI(false);
+      }
+    }
 
+    function toggleWeddingMusic() {
+      const audio = document.getElementById('weddingAudio');
+      if (!audio) return;
+      if (isMusicPlaying && !audio.paused) {
+        audio.pause();
+        updateMusicUI(false);
+      } else {
+        playWeddingMusic();
+      }
+    }
+
+    // 1-Minute Lyrics Loop Watcher
+    const weddingAudioEl = document.getElementById('weddingAudio');
+    if (weddingAudioEl) {
+      weddingAudioEl.addEventListener('timeupdate', () => {
+        if (weddingAudioEl.currentTime >= (LYRICS_START_SEC + LOOP_DURATION_SEC)) {
+          weddingAudioEl.currentTime = LYRICS_START_SEC;
+          weddingAudioEl.play();
+        }
+      });
+    }
+
+    // 1. Celebratory Rose-Petal Shower on Opening Cover
+    function triggerFloralShower() {
+      const petalColors = ['#8C1422', '#D97706', '#F3D479', '#C69725', '#630D16'];
+      for (let i = 0; i < 26; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'petal-particle';
+        const size = 10 + Math.random() * 10;
+        const color = petalColors[i % petalColors.length];
+        petal.style.left = `${Math.random() * 100}vw`;
+        petal.style.animationDuration = `${3.2 + Math.random() * 2.8}s`;
+        petal.style.animationDelay = `${Math.random() * 0.8}s`;
+        petal.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${color}" opacity="0.88"><path d="M12 2C8 7 4 12 12 22C20 12 16 7 12 2Z"/></svg>`;
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 7000);
+      }
+    }
+
+    // 2. Reliable Open Royal Invitation Handler (Opens smoothly + starts lyrics)
+    function openInvitation() {
+      const cover = document.getElementById('invitation-cover');
+      if (cover && !cover.classList.contains('opened')) {
+        cover.classList.add('opened');
+        triggerFloralShower();
+      }
+      playWeddingMusic();
+    }
+
+    // 3. Live Countdown Timer to Wednesday, December 9, 2026 (10:00 AM IST)
+    const weddingDate = new Date('December 9, 2026 10:00:00 GMT+0530').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+
+      if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+      if (distance <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minsEl.textContent = '00';
+        secsEl.textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = String(days).padStart(2, '0');
+      hoursEl.textContent = String(hours).padStart(2, '0');
+      minsEl.textContent = String(mins).padStart(2, '0');
+      secsEl.textContent = String(secs).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 4. Instant Bilingual English / Hindi Toggle
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'hi' : 'en';
+      document.querySelectorAll('[data-en][data-hi]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+      updateMusicUI(isMusicPlaying);
+    }
+
+    // 5. Add Event to Calendar (.ics download)
+    function downloadICS(title, start, end, location) {
+      const icsContent = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//AnubhavWedsManisha//Wedding Invitation//EN',
+        'BEGIN:VEVENT',
+        `SUMMARY:${title}`,
+        `DTSTART:${start}`,
+        `DTEND:${end}`,
+        `LOCATION:${location}`,
+        'DESCRIPTION:You are cordially invited to celebrate the wedding of Chiranjeevi Anubhav Pal & Ayushmati Manisha Singh (#AnubhavWedsManisha).',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.ics`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // 6. WhatsApp Share Invitation Action
+    function shareOnWhatsApp() {
+      const pageUrl = window.location.href;
+      const text = encodeURIComponent(
+        `॥ श्री गणेशाय नमः ॥\n\n*Anubhav weds Manisha 09.12.2026*\nYou are cordially invited to the Wedding Ceremonies of *Chiranjeevi Anubhav Pal & Ayushmati Manisha Singh* (#AnubhavWedsManisha)\n\n• *Shubh Vivah:* Wednesday, 09.12.2026 (Pipraich, Gorakhpur)\n• *Bahubhoj / Reception:* Friday, 11.12.2026, Evening 7:00 PM onwards at The Revanta, Sitapur Road, Bhitauli, Lucknow\n\nView Royal Invitation:\n${pageUrl}`
+      );
+      window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener');
+    }
+
+    // 7. Attach Event Listeners & Scroll Reveal on DOM Ready
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
