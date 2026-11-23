@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav Weds Manisha | 09.12.2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: linear-gradient(135deg, #2c0703 0%, #5c1409 50%, #2c0703 100%);
+            color: #f8e5c2;
+            font-family: 'Cormorant Garamond', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        #cover {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at center, #7a1c0c 0%, #2b0602 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            z-index: 100;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            border: 8px double #d4af37;
+        }
+        #cover.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .ganesh {
+            font-family: 'Cinzel', serif;
+            color: #f3c65f;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .hashtag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: #e5c17b;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .couple-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.3rem;
+            color: #ffd778;
+            line-height: 1.25;
+            margin: 10px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+        .weds-text {
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #f8e5c2;
+            display: block;
+            margin: 5px 0;
+        }
+        .date-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            border-top: 1px solid #d4af37;
+            border-bottom: 1px solid #d4af37;
+            padding: 8px 20px;
+            margin: 18px 0;
+            color: #ffd778;
+        }
+        .open-btn {
+            margin-top: 20px;
+            background: linear-gradient(45deg, #d4af37, #f7df8b, #d4af37);
+            color: #3a0903;
+            border: none;
+            padding: 15px 34px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+        }
+        #main-card {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 35px 22px;
+            background: rgba(43, 6, 2, 0.88);
+            border: 2px solid #d4af37;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        }
+        .section-box {
+            margin: 28px 0;
+            padding: 22px 15px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 12px;
+            background: rgba(255, 215, 120, 0.04);
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #ffd778;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #f8e5c2;
+        }
+        .highlight {
+            color: #ffd778;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        #music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #d4af37;
+            color: #2c0703;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            z-index: 90;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop preload="auto" crossorigin="anonymous">
+        <source src="https://anubhavpal1992-bit.github.io/anu-weds-manisha/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-control" onclick="toggleMusic()">🔊</button>
+
+    <div id="cover">
+        <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+        <div class="hashtag">ANUBHAV WEDS MANISHA</div>
+        <div class="couple-title">
+            Chiranjeevi Anubhav Pal
+            <span class="weds-text">weds</span>
+            Ayushmati Manisha Singh
+        </div>
+        <div style="font-size: 1.15rem; color: #f3c65f;">चि. अनुभव पाल एवं आयु. मनीषा सिंह</div>
+        <div class="date-badge">09 . 12 . 2026 • SHUBH VIVAH</div>
+        <p style="max-width: 420px; font-size: 1.1rem;">
+            Together with their beloved families, we cordially invite you to grace the auspicious wedding celebrations.
+        </p>
+        <button class="open-btn" onclick="openInvitation()">Open Royal Invitation ➔</button>
+    </div>
+
+    <div id="main-card">
+        <div class="ganesh">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ॥</div>
+        <h2 style="font-size: 1.8rem; margin-top: 10px;">Wedding Invitation</h2>
+        <p>With the heavenly blessings of our elders, we request the pleasure of your company at the marriage ceremony of</p>
+        
+        <div class="section-box">
+            <div class="couple-title" style="font-size: 1.9rem;">
+                Anubhav Pal
+                <span class="weds-text">with</span>
+                Manisha Singh
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2>✨ Shubh Vivah & Reception ✨</h2>
+            <p class="highlight">Wednesday, 9th December 2026</p>
+            <p>Reception & Dinner: 7:00 PM Onwards</p>
+            <p style="margin-top: 8px; color: #ffd778;">Lucknow, Uttar Pradesh</p>
+        </div>
+
+        <div class="section-box">
+            <h2>🙏 Darshanabhilashi 🙏</h2>
+            <p>All Pal Family & Relatives</p>
+            <p style="font-style: italic; margin-top: 10px; font-size: 1.1rem;">"Aapki upasthiti hamare parivar ke liye saubhagya hogi."</p>
+        </div>
+    </div>
+
+    <script>
+        var song = document.getElementById("bg-music");
+        var musicBtn = document.getElementById("music-control");
+
+        function openInvitation() {
+            document.getElementById("cover").classList.add("hidden");
+            musicBtn.style.display = "block";
+            song.volume = 1.0;
+            song.play();
+        }
+
+        function toggleMusic() {
+            if (song.paused) {
+                song.play();
+                musicBtn.innerHTML = "🔊";
+            } else {
+                song.pause();
+                musicBtn.innerHTML = "🔇";
+            }
+        }
+    </script>
+
+</body>
+</html>
